@@ -1,0 +1,93 @@
+// @use "../../../styles";
+
+.container {
+  margin-left: 35px;
+  margin-right: 35px;
+  margin-top: 35px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  font-weight: unset;
+  padding-right: 10px;
+}
+
+th {
+  text-align: left;
+}
+
+td {
+  text-align: left;
+}
+
+.td-center {
+  text-align: center;
+}
+
+.table-head {
+  font-family: Lato-Bold;
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.4;
+  background-color: #6c7ae0;
+}
+
+.column1-steps {
+  width: 12.5%;
+}
+
+.column2-steps {
+ width: 75%;
+}
+
+.column3-steps {
+  width: 12.5%;
+}
+
+.column1 {
+  width: 33%;
+}
+
+.column2 {
+  width: 13%;
+}
+
+.column3 {
+  width: 13%;
+}
+
+.column4 {
+  width: 41%;
+}
+
+.table-head-urgent {
+  color: red;
+}
+
+.table-row {
+  font-size: 15px;
+  color: gray;
+  line-height: 1.4;
+}
+
+.td-completed {
+  background-color: #03c04A;
+}
+
+.td-uncheck {
+  background-color: #f8f6ff;
+}
+
+.td-check {
+  background-color: #03c04A;
+  // background-color: #6c7ae0;
+}
+
+.td-urgent {
+  background-color: red;
+  // background-color: #6c7ae0;
+}

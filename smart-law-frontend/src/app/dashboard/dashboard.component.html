@@ -1,0 +1,58 @@
+<div class="container">
+
+  <div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="table-head column1-steps"></th>
+          <th class="table-head column2-steps">Steps</th>
+          <th class="table-head column3-steps td-center">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let step of steps" [ngClass]="{'td-completed': step.completed}">
+          <td class="table-row td-center">
+            {{ step.id }}
+          </td>
+          <td class="table-row">
+             {{ step.title }}
+          </td>
+          <td class="table-row td-center ">
+            {{ step.checked_task_count > 0 ? ((step.checked_task_count / step.tasks_count) * 100).toFixed(2) : 0 }} %
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="table-head column1">FIRST CONSULTATION</th>
+          <th class="table-head column2">CHECK</th>
+          <th class="table-head column3 table-head-urgent">URGENT</th>
+          <th class="table-head column4">NOTES</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of tasks" [ngClass]="{'td-uncheck': !task.checked,'td-check': task.checked, 'td-urgent': task.urgent}">
+          <td class="table-row">
+            {{ task.title }}
+          </td>
+          <td class="table-row">
+            <input type="checkbox" [checked]="task.checked" (change)="onTaskCheckChange(task)"/>
+          </td>
+          <td class="table-row">
+            <input type="checkbox" [checked]="task.urgent" (change)="onTaskUrgentChange(task)"/>
+          </td>
+          <td class="table-row">
+            {{ task.notes }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

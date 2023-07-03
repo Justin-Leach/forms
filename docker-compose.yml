@@ -9,7 +9,7 @@ services:
       dockerfile: Dockerfile
     container_name: ${DOCKER_APP}-php
     volumes:
-      - ./form-app:/var/www/html
+      - ./smart-law-backend:/var/www/html
     expose:
       - 9000
     ports:
@@ -28,7 +28,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./form-app:/var/www/html
+      - ./smart-law-backend:/var/www/html
       - ./docker/laravel/nginx/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - php
