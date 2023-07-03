@@ -28,3 +28,9 @@ docker-compose rm
 docker-compose build
 docker-compose up -d
 ```
+
+# Command
+sudo chmod 777 Filesystem.php
+
+# AnyFolder
+chmod -R 777 ./folder
